@@ -86,7 +86,6 @@ html, body {
 .profile-picture {
     width: 140px;
     height: 140px;
-    outline: 5px rgba(0, 0, 0, 0.05) solid;
     border-radius: 50%;
     background-color: white;
     background-image: url(./img/Yahya-300.png);
@@ -96,6 +95,21 @@ html, body {
     margin-top: 50px;
     margin-bottom: 25px;
     animation: show-profile-picture 1s ease;
+    position: relative;
+}
+
+.profile-picture::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px rgba(0, 0, 0, 0.05) solid;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .grow-1 {
